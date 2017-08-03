@@ -1,4 +1,6 @@
+// Document Ready Function
 $(document).ready(function() {
+    // Firebase Init
     var config = {
         apiKey: "AIzaSyCkOKvemoaIHzwCXXzssVxJeiAN38tqvOI",
         authDomain: "employee-database-d9e5a.firebaseapp.com",
@@ -20,7 +22,7 @@ $(document).ready(function() {
     var monthlyRate = "";
 
     // Capture Button Click
-    $("#add-user").on("click", function(event) {
+    $("#add").on("click", function(event) {
         event.preventDefault();
 
         // Grabbed values from text boxes
@@ -36,6 +38,7 @@ $(document).ready(function() {
             startDate: startDate,
             monthlyRate: monthlyRate,
             dateAdded: firebase.database.ServerValue.TIMESTAMP
+        
         });
 
     });
@@ -47,15 +50,15 @@ $(document).ready(function() {
 
         // Console.loging the last user's data
         console.log(sv.name);
-        console.log(sv.email);
-        console.log(sv.age);
-        console.log(sv.comment);
+        console.log(sv.role);
+        console.log(sv.startDate);
+        console.log(sv.monthlyRate);
 
         // Change the HTML to reflect
         $("#name-display").html(sv.name);
-        $("#email-display").html(sv.email);
-        $("#age-display").html(sv.age);
-        $("#comment-display").html(sv.comment);
+        $("#email-display").html(sv.role);
+        $("#age-display").html(sv.startDate);
+        $("#comment-display").html(sv.monthlyRate);
 
         // Handle the errors
     }, function(errorObject) {
