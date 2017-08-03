@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <!--<link rel="stylesheet" href="css/main.css"> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="jumbotron nyt-articles-h1">
+                    <span class="center-content"><h1 class="white-font">Employee Data Management</h1>
+                    <h2>A Comprehensive Directory of Employee Billable Hours</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" id="currentEmployees">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                Current Employees
+                </div>
+                <div class="panel-body" >
+                    <div class="row" id="headerRow">
+                        <div class="col-md-2">
+                            <h4>Employee Name</h4>            
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Role</h4>            
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Start Date</h4>            
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Months Worked</h4>            
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Monthly Rate ($)</h4>            
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Total Billed ($)</h4>            
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row" id="employeeData"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Search Parameters</h3>
+                </div>
+                <div class="panel-body">
+                    <label for="employeeName">Employee Name</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputName" aria-describedby="basic-addon1">
+                    </div>
+                    <label for="role">Role</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="role" aria-describedby="basic-addon2">
+                    </div>
+                    <label for="start-year">Start Date (DD/MM/YY - ex: 01/01/89)</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="startYear" aria-describedby="basic-addon3">
+                    </div>
+                    <label for="monthly-rate">Monthly Rate</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="monthlyRate" aria-describedby="basic-addon4">
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary" id="search">Search</button>
+                    <button type="button" class="btn btn-primary" id="clear">Clear Results</button>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script type="text/javascript" src="assets/js/data.js"></script>
+</html>
