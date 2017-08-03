@@ -70,24 +70,25 @@
                     <h3 class="panel-title">Search Parameters</h3>
                 </div>
                 <div class="panel-body">
-                    <label for="search-Term">Search Term:</label>
+                    <label for="employeeName">Employee Name</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="searchTerm" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="inputName" aria-describedby="basic-addon1">
                     </div>
-                    <label for="rec-Num">Number of Records to Retrieve:</label>
+                    <label for="role">Role</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="numberOfRecords" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control" id="role" aria-describedby="basic-addon2">
                     </div>
-                    <label for="start-year">Start Year(Optional):</label>
+                    <label for="start-year">Start Date (DD/MM/YY - ex: 01/01/89)</label>
                     <div class="input-group">
                         <input type="text" class="form-control" id="startYear" aria-describedby="basic-addon3">
                     </div>
-                    <label for="end-year">End Year(Optional):</label>
+                    <label for="monthly-rate">Monthly Rate</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" id="endYear" aria-describedby="basic-addon4">
+                        <input type="text" class="form-control" id="monthlyRate" aria-describedby="basic-addon4">
                     </div>
-                    <button id="search">Search</button>
-                    <button id="clear">Clear Results</button>
+                    
+                    <button type="button" class="btn btn-primary" id="search">Search</button>
+                    <button type="button" class="btn btn-primary" id="clear">Clear Results</button>
                 </div>
             </div>
         </div>
