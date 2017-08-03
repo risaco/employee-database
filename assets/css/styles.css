@@ -26,4 +26,16 @@ h2 {
 
 .fa-4x {
 	font-size: 63px;
+  
+.input-group {
+	width: 100%;
+}
+
+.btn {
+	margin-top: 20px;
+}
+
+#headerRow {
+	border-bottom: 1px solid gray;
+	margin: 0 10px;
 }
