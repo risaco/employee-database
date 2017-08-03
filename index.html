@@ -107,27 +107,25 @@
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 <script>
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyDJxH1d9-_sgY8Ty-CGaUEdsY-X2EE8B2g",
-    authDomain: "elijahs-playground.firebaseapp.com",
-    databaseURL: "https://elijahs-playground.firebaseio.com",
-    projectId: "elijahs-playground",
-    storageBucket: "elijahs-playground.appspot.com",
-    messagingSenderId: "545115034472"
-};
-firebase.initializeApp(config);
+    var config = {
+    apiKey: "AIzaSyCkOKvemoaIHzwCXXzssVxJeiAN38tqvOI",
+    authDomain: "employee-database-d9e5a.firebaseapp.com",
+    databaseURL: "https://employee-database-d9e5a.firebaseio.com",
+    projectId: "employee-database-d9e5a",
+    storageBucket: "",
+    messagingSenderId: "450233857300"
+  };
+  firebase.initializeApp(config);
 
-firebase.initializeApp(config);
 
 // Create a variable to reference the database.
 var database = firebase.database();
 
-// Initial Values
+// Initial Values for Database Storage
 var name = "";
-var email = "";
-var age = 0;
-var comment = "";
+var role = "";
+var startDate = "";
+var monthlyRate = "";
 
 // Capture Button Click
 $("#add-user").on("click", function(event) {
@@ -172,5 +170,4 @@ database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", functi
     console.log("Errors handled: " + errorObject.code);
 });
 </script>
-
 </html>
